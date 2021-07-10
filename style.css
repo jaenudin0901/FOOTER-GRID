@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: end;
+  align-content: end;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: rgb(19, 42, 216);
+}
+footer .container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px 40px;
+    color: rgb(233, 218, 218);
+}
+.about{
+    /* padding: 0 20px ; */
+}
+
+ h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+    margin-bottom: 20px;
+}
+ h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: chartreuse;
+}
+footer .container .about .sci {    
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px; 
+}
+.about .sci  li{
+    list-style: none;
+}
+ .sci li a {
+    text-decoration: none;
+    color: whitesmoke;
+    width: 48px;
+    height: 48px;
+    background: rgb(130, 159, 238);
+    display: inline-block;
+    display: grid;
+    align-content: center;
+    border-radius: 4px;
+    justify-content: center;
+}
+ .sci li a .fa{
+     color: #fff;
+     font-size: 20px;
+ }
+ .sci li a:hover{
+     background: blue;
+ }
+
+ul li {
+    list-style: none;
+}
+ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 0;
+    color: whitesmoke;
+}
+ul li a:hover{
+    color: yellow;
+}
+.contactUs li a{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+.copyright{
+    background: blue;
+    text-align: center;
+    padding: 12px 0;
+    color: #fff;
+}
+@media(max-width:991px){
+
+    footer{
+        padding: 40px;
+    }
+    footer .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 10px 20px;
+    color: rgb(233, 218, 218);
+}
+}
+
+@media(max-width:768px){
+    footer {
+        padding: 20px;
+    }
+
+    footer .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        padding: 10px 20px;
+        color: rgb(233, 218, 218);
+    }
+    .copyright {
+        background: blue;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 14px;
+        color: #fff;
+    }
+}
